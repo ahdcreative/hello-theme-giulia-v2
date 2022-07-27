@@ -217,3 +217,4 @@ dist
 .idea/hello-thene-giulia.iml
 .idea/misc.xml
 .idea/modules.xml
+package-lock.json
