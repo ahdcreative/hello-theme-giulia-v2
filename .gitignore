@@ -218,3 +218,8 @@ dist
 .idea/misc.xml
 .idea/modules.xml
 package-lock.json
+.idea/sshConfigs.xml
+.idea/hello-theme-giulia-v2.iml
+.idea/vcs.xml
+.idea/webServers.xml
+assets/css/giulia-child.css
