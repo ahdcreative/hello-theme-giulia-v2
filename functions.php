@@ -1,11 +1,14 @@
 <?php
-//COSTANTI
+//CONSTANTS
 define('__CHILD_INC__', __DIR__ . '/inc/', true);
 
-// Esci se accedi direttamente a questo file
-if (!defined('ABSPATH')) exit;
 
-// NON TOCCARE
+// Exit if accessed directly
+if ( !defined( 'ABSPATH' ) ) exit;
+
+// BEGIN ENQUEUE PARENT ACTION
+// AUTO GENERATED - Do not modify or remove comment markers above or below:
+
 if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
     function chld_thm_cfg_locale_css( $uri ){
         if ( empty( $uri ) && is_rtl() && file_exists( get_template_directory() . '/rtl.css' ) )
@@ -22,12 +25,14 @@ if ( !function_exists( 'child_theme_configurator_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
-class Giulia {
-    public static function init() {
+// END ENQUEUE PARENT ACTION
+// START SITE CLASS
+class GiuliaSide{
+    public static function init(){
         self::load('__loader');
     }
-
     private function load($file){
         require __CHILD_INC__ . $file;
+
     }
 }
