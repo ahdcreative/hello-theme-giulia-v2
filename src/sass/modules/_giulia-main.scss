@@ -1,7 +1,7 @@
 .products {
 	&.elementor-grid {
 		li.product {
-			display: flex;
+			display: flex !important;
 			flex-wrap: wrap;
 
 			a.woocommerce-loop-product__link, a.add_to_cart_button {
