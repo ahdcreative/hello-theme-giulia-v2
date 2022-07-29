@@ -1,13 +1,13 @@
 <?php
-class HelloEnqueue{
-    public static function init(){
+class HelloEnqueue {
+    public static function init(): void
+    {
         add_action('wp_enqueue_scripts', array('HelloEnqueue', 'enqueue_styles'));
-        //add_action('wp_enqueue_scripts', array('HelloEnqueue', 'enqueue_scripts'));
     }
 
-    public static function enqueue_styles(){
-        wp_enqueue_style('hello-elementor-child-style', get_stylesheet_directory_uri() . '/style.css', ['hello-elementor-theme-style',	],	'1.0.0'	);
-        wp_enqueue_style('giulia-child-styles', get_stylesheet_directory() . '/assets/css/giulia-child.css', array(), false, 'all');
+    public static function enqueue_styles(): void
+    {
+        wp_enqueue_style('hello-elementor-child-theme', get_stylesheet_directory_uri() . '/style.css', ['hello-elementor-theme-style'], '1.0', 'all');
+        wp_enqueue_style('ottica-giulia', get_stylesheet_directory_uri() . 'assets/css/giulia-child.css', ['hello-elementor-child-theme'], '1.0', 'all');
     }
 }
-HelloEnqueue::init();
