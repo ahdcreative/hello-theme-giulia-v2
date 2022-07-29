@@ -222,4 +222,4 @@ package-lock.json
 .idea/hello-theme-giulia-v2.iml
 .idea/vcs.xml
 .idea/webServers.xml
-assets/css/giulia-child.css
+/assets/
