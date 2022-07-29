@@ -14,7 +14,7 @@ if ( ! function_exists( 'chld_thm_cfg_locale_css' ) ):
 endif;
 add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 if ( ! function_exists( 'child_theme_configurator_css' ) ):
-    function child_theme_configurator_css(): void {
+    function child_theme_configurator_css() {
         wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array(
             'hello-elementor',
             'hello-elementor',
@@ -25,11 +25,11 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 class LinkSide {
-    public static function init(): void {
+    public static function init() {
         ( new LinkSide )->load();
     }
 
-    private function load(): void {
+    private function load() {
         require __CHILD_INC__ . '__loader.php';
     }
 }
