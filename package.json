@@ -1,7 +1,10 @@
 {
   "name": "hello-theme-giulia",
   "version": "1.0.0",
+  "private": true,
+  "prettier": "@ahdcreative/prettier-config-ahd",
   "dependencies": {
+    "@ahdcreative/eslint-config-ahd": "^1.0.8",
     "browser-sync": "2.27.10",
     "del": "7.0.0",
     "gulp": "4.0.2",
@@ -12,6 +15,27 @@
     "gulp-useref": "5.0.0",
     "node-sass": "7.0.1",
     "sass": "1.54.0",
-    "gulp-sass": "5.1.0"
+    "gulp-sass": "5.1.0",
+    "stylelint": "^14.8.2"
+  },
+  "devDependencies": {
+    "@percy/cli": "^1.10.2",
+    "@ahdcreative/stylelint-config-ahd": "^1.0.3",
+    "@ahdcreative/prettier-config-ahd": "^1.0.5",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "prettier": "^2.7.1",
+    "@prettier/plugin-php": "^0.19.0",
+    "prettier-eslint": "^15.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1"
+  },
+  "scripts": {
+    "giulia": "gulp giulia",
+    "lint:css": "stylelint **/**/*.scss",
+    "lint:js": "eslint --ext .js,.ts,.tsx --report-unused-disable-directives .",
+    "lint": "npm run lint:js && npm run lint:css",
+    "format": "prettier --cache --write '**/*.{js,md,css,scss,yaml,yml,json}'",
+    "lint:format": "prettier --cache --check '**/*.{js,md,css,scss,yaml,yml,json}'",
+    "preflight": "npm run format && npm run lint"
   }
 }
