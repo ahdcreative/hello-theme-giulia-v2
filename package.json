@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@percy/cli": "1.10.2",
-    "@ahdcreative/stylelint-config-ahd": "1.0.3",
+    "@ahdcreative/stylelint-config-ahd": "1.0.4",
     "@ahdcreative/prettier-config-ahd": "1.0.5",
     "stylelint-config-prettier-scss": "0.0.1",
     "prettier": "2.7.1",
